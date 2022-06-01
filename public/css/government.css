@@ -1,0 +1,35 @@
+.chart {
+    width: 75%;
+}
+
+.modify {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    row-gap: 4rem;
+    column-gap: 4rem;
+}
+
+.modify>div {
+    width: 400px;
+}
+
+#education {
+    /* display: flex; */
+    margin: auto;
+
+}
+
+#dept {
+    margin: auto;
+}
+
+#profit {
+    margin: auto;
+    width: 600px;
+}
+
+#payment {
+    margin: auto;
+    width: 600px;
+}

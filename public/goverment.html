@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Dashboard</title>
+    <link rel="stylesheet" href="css/government.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/HomePage.css">
+    <!-- <script src="./government.js"></script> -->
+    <script src="js/government1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="title"><span class="firstLetter">E</span>conomy <span class="firstLetter">D</span>ashboard</span>
+    </nav>
+    <main>
+        <aside class="sidebar">
+        <ul class="links" style="padding : 0px;">
+            <li>
+                <a href="/gdp">GDP</a>
+            </li>
+            <li>
+                <a href="/import">Import</a>
+            </li>
+            <li>
+                <a href="/export">Export</a>
+            </li>
+            <li>
+                <a href="/business">Business & Consumer</a>
+            </li>
+            <li>
+                <a href="/goverment">Government</a>
+            </li>
+            <li>
+                <a href="/other">Other indicators</a>
+            </li>
+        </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="*">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="*">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="intro">
+            <h1 class="main-title">Expenditure</h1>
+            <p>Government spending refers to money spent by the public sector on the acquisition of goods and provision
+                of
+                services such as education, healthcare, social protection, and defense. In national income accounting,
+                when the
+                government acquires goods and services for current use to directly satisfy the individual or collective
+                needs
+                and requirements of the community, it is classified as government final consumption spending. When the
+                government acquires goods and services for future use, it is classified as government investment. This
+                includes
+                public consumption and public investment, and transfer payments consisting of income transfers.</p>
+
+            <div class="expenditure">
+                <h3 class='main-title'>Military Expenditure</h3>
+                <p>Military expenditure, also known as a defense budget, is the amount of financial resources dedicated
+                    by a
+                    state to raising and maintaining an armed forces or other methods essential for defense purposes.
+                    Military
+                    budgets often reflect how strongly a country perceives the likelihood of threats against it, or the
+                    amount of
+                    aggression it wishes to conjure. It also gives an idea of how much financing should be provided for
+                    the
+                    upcoming fiscal year. </p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="military" class="chart"></div>
+
+                <h3 class='main-title'>Health Expenditure</h3>
+                <p>Health expenditure includes all expenditures for the provision of health services, family planning
+                    activities, nutrition activities and emergency aid designated for health, but it excludes the
+                    provision of
+                    drinking water and sanitation. Health financing is a critical component of health systems.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="health" class="chart"></div>
+
+                <h3 class='main-title'>Education Expenditure</h3>
+                <p>Education spending covers expenditure on schools, universities and other public and private
+                    educational
+                    institutions. Spending includes instruction and ancillary services for students and families
+                    provided through
+                    educational institutions. Spending is shown in USD per student and as a percentage of GDP.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="education" class="chart"></div>
+
+                <h3 class='main-title'>Government Consumption Expenditure</h3>
+                <p>Government final consumption expenditure (GFCE) is an aggregate transaction amount on a country's
+                    national
+                    income accounts representing government expenditure on goods and services that are used for the
+                    direct
+                    satisfaction of individual needs (individual consumption) or collective needs of members of the
+                    community
+                    (collective consumption). It consists of the value of the goods and services produced by the
+                    government itself
+                    other than own-account capital formation and sales and of purchases by the government of goods and
+                    services
+                    produced by market producers that are supplied to households - without any transformation</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="consume" class="chart"></div>
+            </div>
+
+            <h2 class='main-title'>Government Dept</h2>
+            <p>A country's gross government debt (also called public debt, or sovereign debt) is the financial
+                liabilities of
+                the government sector. Changes in government debt over time reflect primarily borrowing due to past
+                government
+                deficits. A deficit occurs when a government's expenditures exceed revenues. Government debt may be owed
+                to
+                domestic residents, as well as to foreign residents. If owed to foreign residents, that quantity is
+                included in
+                the country's external debt.</p>
+            <div class="btn-group">
+                <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+            </div>
+            <div id="dept" class="chart"></div>
+
+            <div class="Taxes">
+                <h1 class="main-title">Taxes</h1>
+                <p>Taxes are mandatory contributions levied on individuals or corporations by a government
+                    entity—whether local,
+                    regional, or national. Tax revenues finance government activities, including public works and
+                    services such as
+                    roads and schools, or programs such as Social Security and Medicare. Taxes are mandatory
+                    contributions
+                    collected by governments.</p>
+
+                <h3 class="main-title">Tax Revenue</h3>
+                <p>Tax revenue is the income that is collected by governments through taxation. Taxation is the primary
+                    source
+                    of government revenue. Revenue may be extracted from sources such as individuals, public
+                    enterprises, trade,
+                    royalties on natural resources and/or foreign aid.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="revenue" class="chart"></div>
+
+                <h3 class="main-title">Profit Tax(%)</h3>
+                <p>A corporate tax is a tax on the profits of a corporation. The taxes are paid on a company's taxable
+                    income,
+                    which includes revenue minus cost of goods sold (COGS), general and administrative (G&A) expenses,
+                    selling and
+                    marketing, research and development, depreciation, and other operating costs.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="profit" class="chart"></div>
+
+                <h3 class="main-title">Tax Payments</h3>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="payment" class="chart"></div>
+
+                <h3 class="main-title">Stocks traded, total value (current US$)</h3>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="stock" class="chart"></div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- this is the export javascript component -->
+    <script src="js/addParaProperty.js"></script>
+</body>
+
+</html>

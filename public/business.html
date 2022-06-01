@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/HomePage.css">
+    <script src="js/buniness1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="title"><span class="firstLetter">E</span>conomy <span class="firstLetter">D</span>ashboard</span>
+    </nav>
+    <main>
+        <aside class="sidebar">
+            <ul class="links" style="padding : 0px;">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/gdp">GDP</a>
+                </li>
+                <li>
+                    <a href="/import">Import</a>
+                </li>
+                <li>
+                    <a href="/export">Export</a>
+                </li>
+                <li>
+                    <a href="/business">Business & Consumer</a>
+                </li>
+                <li>
+                    <a href="/goverment">Government</a>
+                </li>
+                <li>
+                    <a href="/other">Other indicators</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="*">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="*">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="intro">
+            <h1 class="main-title">Business</h1>
+            <p class="description">Business economics is a field in applied economics which uses economic theory and
+                quantitative methods to analyze business enterprises and the factors contributing to the diversity of
+                organizational structures and the relationships of firms with labour, capital and product markets. A
+                professional focus of the journal Business Economics has been expressed as providing "practical
+                information for
+                people who apply economics in their jobs."</p>
+
+            <div class=Cost">
+                <p class="description">Cost to register a business is normalized by presenting it as a percentage of
+                    gross
+                    national income (GNI) per capita. The map below shows how Cost of business start-up procedures (% of
+                    GNI per
+                    capita) varies by country. The shade of the country corresponds to the magnitude of the indicator.
+                    The darker
+                    the shade, the higher the value. </p>
+                <p class="description">Ease of doing business is an index published by the World Bank. It is an
+                    aggregate figure
+                    that includes different parameters which define the ease of doing business in a country.</p>
+                <div class="modify">
+                    <div id="cost-chart" class="costChart">
+                        <div class="btn-group">
+                            <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                            <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                            <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                            <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                        </div>
+                        <div id="cost" class="chart"></div>
+                    </div>
+                    <div id="ease-chart" class="easeChart">
+
+                        <div class="btn-group">
+                            <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                            <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                            <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                            <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                        </div>
+                        <div id="ease" class="chart"></div>
+                    </div>
+                    <div id="busino-chart" class="businoChart">
+
+                        <div class="btn-group">
+                            <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                            <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                            <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                            <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                        </div>
+                        <div id="busino" class="chart"></div>
+                    </div>
+                    <div id="density-chart" class="densityChart">
+
+                        <div class="btn-group">
+                            <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                            <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                            <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                            <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                        </div>
+                        <div id="density" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="consumer">
+                <h1 class="main-title">Consumer</h1>
+                <p class="description">A consumer is a person or a group who intends to order, orders, or uses purchased
+                    goods,
+                    products, or services primarily for personal, social, family, household and similar needs, not
+                    directly
+                    related to entrepreneurial or business activities.</p>
+
+                <p class="description">The number of active Internet users in India is expected to increase by 45% in
+                    the next
+                    five years and touch 900 million by 2025 from around 622 million in 2020, according to the
+                    IAMAI-Kantar ICUBE
+                    2020 report. The report defines an active user as someone who has accessed the Internet at least
+                    once in the
+                    past month.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="internet" class="chart"></div>
+
+                <h3 class="main-title">Inflation</h3>
+                <p class="description">Inflation measures how much more expensive a set of goods and services has become
+                    over a
+                    certain period, usually a year. Inflation is the rate of increase in prices over a given period of
+                    time.
+                    Inflation is typically a broad measure, such as the overall increase in prices or the increase in
+                    the cost of
+                    living in a country. But it can also be more narrowly calculated—for certain goods, such as food, or
+                    for
+                    services, such as a haircut, for example. Whatever the context, inflation represents how much more
+                    expensive
+                    the relevant set of goods and/or services has become over a certain period, most commonly a year.
+                </p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="inflation" class="chart"></div>
+
+                <h3 class="main-title">Consumer Price Index (CPI)</h3>
+                <p class="description">he Consumer Price Index (CPI) is a measure that examines the weighted average of
+                    prices
+                    of a basket of consumer goods and services, such as transportation, food, and medical care. It is
+                    calculated
+                    by taking price changes for each item in the predetermined basket of goods and averaging them.
+                    Changes in the
+                    CPI are used to assess price changes associated with the cost of living. The CPI is one of the most
+                    frequently
+                    used measures of inflation and deflation.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="cpi" class="chart"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- this is the export javascript component -->
+    <script src="js/addParaProperty.js"></script>
+    
+</body>
+
+</html>

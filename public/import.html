@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Dashboard</title>
+    <link rel="stylesheet" href="css/import.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/HomePage.css">
+    <!-- <script src="./importcharts.js"></script> -->
+    <script src="js/import1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="title"><span class="firstLetter">E</span>conomy <span class="firstLetter">D</span>ashboard</span>
+    </nav>
+    <main>
+        <aside class="sidebar">
+            <ul class="links" style="padding : 0px;">
+                <li>
+                    <a href="/gdp">GDP</a>
+                </li>
+                <li>
+                    <a href="/import">Import</a>
+                </li>
+                <li>
+                    <a href="/export">Export</a>
+                </li>
+                <li>
+                    <a href="/business">Business & Consumer</a>
+                </li>
+                <li>
+                    <a href="/goverment">Government</a>
+                </li>
+                <li>
+                    <a href="/other">Other indicators</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="*">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="*">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="intro">
+            <h1 class="main-title">Import</h1>
+            <p>An import is a good or service bought in one country that was produced in another. Imports and exports
+                are the
+                components of international trade. If the value of a country's imports exceeds the value of its exports,
+                the
+                country has a negative balance of trade, also known as a trade deficit.</p>
+
+            <div class="map tradeTable">
+                <caption>India Imports By Country</caption><iframe class='embed-responsive-item'
+                    src='https://comtrade.tradingeconomics.com/comtrade/share?r=ind&c=0000&v=treemapmarkets&t=1&title='></iframe>
+            </div>
+            <p>Countries are most likely to import goods or services that their domestic industries cannot produce as
+                efficiently or cheaply as the exporting country. Countries may also import raw materials or commodities
+                that are
+                not available within their borders.An import is a product or service produced abroad and purchased in
+                your home
+                country.
+                Imported goods or services are attractive when domestic industries cannot produce similar goods and
+                services
+                cheaply or efficiently.</p>
+
+            <div class="map tradeTable">
+                <caption>India Imports By Category</caption><iframe class='embed-responsive-item'
+                    src='https://comtrade.tradingeconomics.com/comtrade/share?r=ind&c=0000&v=piechartcategories&t=1&title='></iframe></iframe>
+            </div>
+
+            <div class="ivi">
+                <h1 class="main-title">Import Price Index</h1>
+                <p>Import Price Indices (MPIs) measure changes in the prices of goods and services provided by
+                    nonresidents
+                    (rest of the world) and used by residents of the economic territory.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="ivi" class="chart"></div>
+            </div>
+
+            <div class="iuvi">
+                <h1 class="main-title">Import unit value index</h1>
+                <p>Unit-values are defined by: trade value / quantity. These unit-values are divided by the average
+                    unit-value
+                    of the previous year to obtain elementary unit-value indices, from which outliers are detected and
+                    removed.
+                </p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="iuvi" class="chart"></div>
+            </div>
+
+            <div class="igoodserv">
+                <h1 class="main-title">Imports of goods and services</h1>
+                <p>Imports of goods and services consist of transactions in goods and services (purchases, barter, and
+                    gifts)
+                    from non-residents to residents. Imports of goods occur when economic ownership of goods changes
+                    between
+                    residents and non-residents.This applies irrespective of corresponding physical movements of goods
+                    across
+                    frontiers. </p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="igoodserv" class="chart"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- this is the export javascript component -->
+    <script src="js/addParaProperty.js"></script>
+</body>
+
+</html>

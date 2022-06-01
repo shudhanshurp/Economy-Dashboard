@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/gdpCharts1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- Main Heading -->
+        <span class="title"><span class="firstLetter">E</span>conomy <span class="firstLetter">D</span>ashboard</span>
+    </nav>
+    <main>
+        <aside class="sidebar">
+            <ul class="links" style="padding : 0px;">
+                <li>
+                    <a href="/gdp">GDP</a>
+                </li>
+                <li>
+                    <a href="/import">Import</a>
+                </li>
+                <li>
+                    <a href="/export">Export</a>
+                </li>
+                <li>
+                    <a href="/business">Business & Consumer</a>
+                </li>
+                <li>
+                    <a href="/goverment">Government</a>
+                </li>
+                <li>
+                    <a href="/other">Other indicators</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="*">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="*">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="intro">
+            <p>Gross domestic product (GDP) is a monetary measure of the market value of all the final goods and
+                services
+                produced in a specific time period by countries. GDP definitions are maintained by a number of national
+                and
+                international economic organizations. The Organisation for Economic Co-operation and Development (OECD)
+                defines
+                GDP as "an aggregate measure of production equal to the sum of the gross values added of all resident
+                and
+                institutional units engaged in production and services (plus any taxes, and minus any subsidies, on
+                products not
+                included in the value of their outputs)". GDP is often used as a metric for international comparisons as
+                well as
+                a broad measure of economic progress.</p>
+            <div class="btn-group">
+                <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+            </div>
+            <div id="gdp" class="chart"></div>
+
+            <div class="gdp-capita">
+                <h1 class="main-title">GDP per capita(in USD)</h1>
+                <p>Per capita gross domestic product (GDP) is a financial metric that breaks down a country's economic
+                    output
+                    per person and is calculated by dividing the GDP of a nation by its population.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="gdpCapita" class="chart"></div>
+            </div>
+
+            <div class="fix-GDP">
+                <h1 class="main-title">Gross fixed capital formation (% of GDP)</h1>
+                <p>Gross fixed capital formation (GFCF) is a macroeconomic concept used in official national accounts
+                    such as
+                    the United Nations System of National Accounts (UNSNA), National Income and Product Accounts (NIPA)
+                    and the
+                    European System of Accounts (ESA). GFCF is called "gross" because the measure does not make any
+                    adjustments to
+                    deduct the consumption of fixed capital (depreciation of fixed assets) from the investment figures.
+                </p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="fixGDP" class="chart"></div>
+            </div>
+
+            <div class="gdp-growth">
+                <h1 class="main-title">GDP growth (annual %)</h1>
+                <p>The GDP growth rate compares the year-over-year (or quarterly) change in a country’s economic output
+                    to
+                    measure how fast an economy is growing. Usually expressed as a percentage rate, this measure is
+                    popular for
+                    economic policy-makers because GDP growth is thought to be closely connected to key policy targets
+                    such as
+                    inflation and unemployment rates.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="gdpGrowth" class="chart"></div>
+            </div>
+
+            <div class="capita-growth">
+                <h1 class="main-title">GDP per capita growth (annual %)</h1>
+                <p>Annual growth rate of real GDP per capita. Annual growth rate of real Gross Domestic Product (GDP)
+                    per capita
+                    is calculated as the percentage change in the real GDP per capita between two consecutive years.
+                    Real GDP per
+                    capita is calculated by dividing GDP at constant prices by the population of a country or area. The
+                    data for
+                    real GDP are measured in constant US dollars to facilitate the calculation of country growth rates
+                    and
+                    aggregation of the country data.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="capitaGrowth" class="chart"></div>
+            </div>
+
+            <div class="gdppp">
+                <h1 class="main-title">GDP Purchasing Power Parity (PPP)</h1>
+                <p>While not directly a measure of GDP, economists look at purchasing power parity (PPP) to see how one
+                    country’s GDP measures up in “international dollars” using a method that adjusts for differences in
+                    local
+                    prices and costs of living to make cross-country comparisons of real output, real income, and living
+                    standards.</p>
+                <div class="btn-group">
+                    <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                    <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                    <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                    <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                </div>
+                <div id="gdpppp" class="chart"></div>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="search.js"></script> -->
+    <script src="js/addParaProperty.js"></script>
+</body>
+
+</html>

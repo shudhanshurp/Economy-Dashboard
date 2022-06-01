@@ -1,0 +1,23 @@
+.chart {
+    width: 75%,
+}
+
+.modify {
+
+    display: grid;
+    grid-template-columns: 437px 409px;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 4rem;
+}
+
+.modify>div {
+    width: 400;
+}
+
+#inflation #myChart5 {
+
+    /* width: 100px; */
+    padding: 50px 0px;
+    /* height: 50%; */
+}

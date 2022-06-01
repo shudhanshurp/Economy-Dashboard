@@ -1,0 +1,18 @@
+.map {
+    width: 75%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.embed-responsive-item {
+    width: 50rem;
+    height: 500px;
+}
+
+.chart {
+    width: 75%;
+}
+
+#myChart0{
+    /* padding: 2rem; */
+}

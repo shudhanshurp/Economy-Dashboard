@@ -1,0 +1,22 @@
+.chart {
+    width: 75%;
+}
+
+.display {
+    /* display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    row-gap: 4rem;
+    column-gap: 4rem; */
+    display: grid;
+    grid-template-columns: 437px 409px;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 4rem;
+
+}
+
+.display>div {
+    width: 600px;
+}
+

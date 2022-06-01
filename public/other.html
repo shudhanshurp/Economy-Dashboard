@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Dashboard</title>
+    <link rel="stylesheet" href="css/other.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/HomePage.css">
+
+    <script src="js/other1.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="title"><span class="firstLetter">E</span>conomy <span class="firstLetter">D</span>ashboard</span>
+    </nav>
+    <main>
+        <aside class="sidebar">
+            <ul class="links" style="padding : 0px;">
+                <li>
+                    <a href="/gdp">GDP</a>
+                </li>
+                <li>
+                    <a href="/import">Import</a>
+                </li>
+                <li>
+                    <a href="/export">Export</a>
+                </li>
+                <li>
+                    <a href="/business">Business & Consumer</a>
+                </li>
+                <li>
+                    <a href="/goverment">Government</a>
+                </li>
+                <li>
+                    <a href="/other">Other indicators</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="*">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="*">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="intro">
+            <h3 class='main-title'>Greenhouse Gas Emissions</h3>
+            <p>Greenhouse gas emissions from human activities strengthen the greenhouse effect, causing climate change.
+                Most
+                is carbon dioxide from burning fossil fuels: coal, oil, and natural gas. The largest emitters include
+                coal in
+                China and large oil and gas companies, many state-owned by OPEC and Russia. Human-caused emissions have
+                increased atmospheric carbon dioxide by about 50% over pre-industrial levels. The growing levels of
+                emissions
+                have varied, but it was consistent among all greenhouse gases. In fact, the average amount of emissions
+                in the
+                decade (2010-2019) was higher than any other decade among all greenhouse gases.</p>
+            <div class="display">
+                <div id="green-gas" class="greenGas">
+                    <div class="btn-group">
+                        <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                        <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                        <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                        <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                    </div>
+                    <div id="green" class="chart"></div>
+                </div>
+                <div id="gas-chart" class="gasChart">
+                    <div class="btn-group">
+                        <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                        <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                        <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                        <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                    </div>
+                    <div id="gas" class="chart"></div>
+                </div>
+            </div>
+
+
+            <h3 class='main-title'>Forest Area</h3>
+            <p>Forest cover is the total geographical area declared as forest by the government. As of 2019, the total
+                forest
+                cover in India is 712,249 Sq km (71.22 million hectares), which is 21.67 percent of the total
+                geographical area.
+                The total forest cover as per the IFSR-2021-22 is 80.90 million hectares that is 24.62% .Whereas, the
+                total
+                forest and tree cover in India is 807,276 Sq km (80.73 million hectors), which is 24.56 percent of the
+                total
+                geographical area of the country. Tree density is the quantification of how closely the trees are
+                growing in a
+                hectare area. It is not the exact number of trees in the forest but, serves as an estimate to the
+                foresters.</p>
+            <div class="display">
+                <div id="forest-chart" class="forestChart">
+                    <div class="btn-group">
+                        <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                        <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                        <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                        <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                    </div>
+                    <div id="forest" class="chart"></div>
+                </div>
+                <div id="area-chart" class="areaChart">
+                    <div class="btn-group">
+                        <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                        <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                        <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                        <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+                    </div>
+                    <div class="chart" id="area"></div>
+                </div>
+            </div>
+
+            <h3 class='main-title'>Population</h3>
+            <p>Population typically refers to the number of people in a single area, whether it be a city or town,
+                region,
+                country, continent, or the world. India is the second most populated country in the world with a sixth
+                of the
+                world's population. According to the 2019 revision of the World Population Prospects the population
+                stood at
+                1,352,642,280.</p>
+            <div class="btn-group">
+                <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+            </div>
+            <div id="population" class="chart"></div>
+
+            <h3 class='main-title'>Population Growth Rate</h3>
+            <p>Population growth rate is the increase in the number of people in a population. Global human population
+                growth
+                amounts to around 83 million annually, or 1.1% per year. The global population has grown from 1 billion
+                in 1800
+                to 7.9 billion in 2020. The UN projected population to keep growing, and estimates have put the total
+                population
+                at 8.6 billion by mid-2030, 9.8 billion by mid-2050 and 11.2 billion by 2100.</p>
+            <div class="btn-group">
+                <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+            </div>
+            <div id="growth" class="chart"></div>
+
+            <h3 class="main-title">Access to electricity</h3>
+            <p>Access to electricity is the percentage of population with access to electricity. Access to electricity
+                (% of
+                population) in India was reported at 97.82 % in 2019, according to the World Bank collection of
+                development
+                indicators, compiled from officially recognized sources.</p>
+            <div class="btn-group">
+                <button class="btn-year" value="5" onclick="myFun(this)">5</button>
+                <button class="btn-year" value="10" onclick="myFun(this)">10</button>
+                <button class="btn-year" value="20" onclick="myFun(this)">20</button>
+                <button class="btn-year" value="Max" onclick="myFun(this)">Max</button>
+            </div>
+            <div id="elect" class="chart"></div>
+
+        </div>
+    </main>
+
+    <!-- <script src="./other1.js"></script> -->
+    <!-- this is the export javascript component -->
+    <script src="js/addParaProperty.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economy Dashboard</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" type='text/css' href="css/HomePage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar">
+    <!-- Main Heading -->
+    <span class="title"><span class="firstLetter">E</span>conomy <span class="firstLetter">D</span>ashboard</span>
+
+  </nav>
+  <main>
+    <!-- Side Panel -->
+    <aside class="sidebar">
+      <ul class="links" style="padding : 0px;">
+        <li>
+          <a href="/gdp">GDP</a>
+        </li>
+        <li>
+          <a href="/import">Import</a>
+        </li>
+        <li>
+          <a href="/export">Export</a>
+        </li>
+        <li>
+          <a href="/business">Business & Consumer</a>
+        </li>
+        <li>
+          <a href="/goverment">Government</a>
+        </li>
+        <li>
+          <a href="/other">Other indicators</a>
+        </li>
+      </ul>
+      <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="*">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="*">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Page and Content -->
+    <div class="intro">
+      <h1 class="main-title">Economy of India</h1>
+      <p class="para description">The economy of India is a middle income developing market economy. It is the world's
+        sixth-largest economy by
+        nominal GDP and the third-largest by purchasing power parity (PPP). According to the International Monetary Fund
+        (IMF), on a per capita income basis, India ranked 145th by GDP (nominal) and 122th by GDP (PPP). From
+        independence in 1947 until 1991, successive governments promoted protectionist economic policies, with extensive
+        state intervention and economic regulation. This is characterised as dirigism, in the form of the License Raj.
+        The end of the Cold War and an acute balance of payments crisis in 1991 led to the adoption of a broad economic
+        liberalisation in India. Since the start of the 21st century, annual average GDP growth has been 6% to 7%, and
+        from 2013 to 2018 and in 2021, India is the world's fastest growing major economy, surpassing China.
+        Historically, India was the largest economy in the world for most of the two millennia from the 1st until the
+        19th century.</p>
+
+      <div class="map">
+        <!-- <caption class="description">Exports of goods and services (% of GDP) - India</caption> -->
+        <div id="gdp-table">
+
+        </div>
+        <iframe
+          src="https://data.worldbank.org/share/widget?end=2020&indicators=NE.EXP.GNFS.ZS&locations=IN&start=2020&view=map"
+          class="frameLink"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <!-- this is the export javascript component -->
+  <script src="./addParaProperty.js"></script>
+  <link rel="import" href="component.html">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="HomePage.css"> -->
+  <script>
+    // Make table using JSON file now its store at local storge but at project time its
+    // redering using database and fetch the code into server using API database
+    // example : (Student Api)
+
+    console.log("this is the script file ");
+
+    const countryCodeArr = ["USA", "CHN", 'JPN', "DEU", "GBR", "IND", "FRA", "ITA", "CAN", "KOR"];
+
+    const gdpData = async function () {
+      try {
+        const res = await fetch("js/gdp_data_2020.json", { method: "GET" });
+
+        const arrGdp = await res.json();
+
+        console.log(arrGdp);
+
+        const top10Gdp = [];
+
+        let i = 50;
+        while (i > 0) {
+          var maxIndex = 0;
+          for (let index = 1; index < arrGdp.length; index++) {
+
+            if (arrGdp[maxIndex].year2020 < arrGdp[index].year2020)
+              maxIndex = index;
+          }
+
+          const element = arrGdp[maxIndex];
+
+          if (countryCodeArr.includes(element.countryCode))
+            top10Gdp.push(arrGdp[maxIndex]);
+
+          arrGdp.splice(maxIndex, 1);
+
+          i--;
+
+        }
+
+        return top10Gdp;
+
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    gdpData().then((res) => {
+
+      // console.log(res);
+
+      // 0: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'United States', countryCode: 'USA', year2020: 20953030000000}
+      // 1: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'China', countryCode: 'CHN', year2020: 14722730697890.1}
+      // 2: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'Japan', countryCode: 'JPN', year2020: 5057758958706.64}
+      // 3: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'Germany', countryCode: 'DEU', year2020: 3846413928653.71}
+      // 4: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'United Kingdom', countryCode: 'GBR', year2020: 2759804061837.07}
+      // 5: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'India', countryCode: 'IND', year2020: 2660245248867.63}
+      // 6: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'France', countryCode: 'FRA', year2020: 2630317731455.26}
+      // 7: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'Italy', countryCode: 'ITA', year2020: 1888709443687.48}
+      // 8: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'Canada', countryCode: 'CAN', year2020: 1645423407568.36}
+      // 9: {seriesName: 'GDP (current US$)', seriesCodes: 'NY.GDP.MKTP.CD', countryName: 'Korea, Rep.', countryCode: 'KOR', year2020: 1637895802792.9}
+
+      const divTable = document.getElementById("gdp-table");
+
+
+      var table = `
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Sr No</th>
+          <th scope="col">Country Name</th>
+          <th scope="col">Country Code</th>
+          <th scope="col">GDP (current US$)</th>
+        </tr>
+      </thead>
+      <tbody>
+       `;
+      let i = 1;
+
+      res.forEach(element => {
+
+        table += `<tr>
+          <th scope="row">${i++}</th>
+          <td>${element.countryName}</td>
+          <td>${element.countryCode}</td>
+          <td>$${(element.year2020 / 10e11).toFixed(4)}T</td>
+        </tr>`;
+
+      });
+
+      table += ` </tbody>
+    </table>`;
+
+      divTable.innerHTML = table;
+
+
+
+    });
+
+
+    /*
+    
+    */
+  </script>
+</body>
+
+</html>

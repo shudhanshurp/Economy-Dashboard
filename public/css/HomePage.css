@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+/* utility classes And General Classes */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+.description {
+    margin: 20px 0px;
+    word-spacing: 4px;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    text-indent: 2rem;
+}
+
+.table-desription {
+    word-spacing: 4px;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+/* body */
+body {
+    margin: 0;
+}
+
+/* navbar */
+.navbar {
+    position: sticky;
+    /* padding: 2rem; */
+    /* margin: 10px 0px; */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    z-index: -1;
+    /* background-color: rgb(255, 78, 78); */
+    /* background-color: #da2337; */
+    /* background-color: #f44360; */
+    /* color: white; */
+    /* background-color: rgb(163, 214, 214); */
+    /* background-color: #ffe4e4; */
+
+    font-size: 2rem;
+}
+
+/* search box */
+.search {
+
+    /* float: right; */
+    margin-left: auto;
+
+}
+
+/* search bar */
+.search input {
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgb(109, 108, 108);
+    color: #bcedf3;
+
+}
+
+.search span {
+    align-items: center;
+    /* margin: 40px 2px; */
+
+}
+
+/* search icon  */
+#search-icon img {
+    width: 43px;
+    position: relative;
+    top: -5px;
+
+
+}
+
+/* Main Title */
+.title {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+}
+
+/* Title First Letter */
+.firstLetter {
+    font-size: 2.5rem;
+}
+
+/* Side bar */
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 15rem;
+    /* background: #f0e2de; */
+    background-image: linear-gradient(to right, #f7cdc2, white);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    /* position: relative; */
+    /* z-index: -1; */
+    /* position: abl; */
+    /* position: absolute; */
+    /* position: absolute; */
+    /* padding-top : 150px ; */
+    background-blend-mode: hard-light;
+}
+
+/* Side bar list Parent */
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+/* Sidebar links */
+.links a {
+    display: block;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    transition: all 0.1s ease-in-out 0.01s;
+}
+
+.links a:hover {
+    background-color: rgb(255, 255, 255);
+    border-left: 10px solid #ed193b;
+    color: #ed193b;
+}
+
+/* soical media icon */
+.social-icons {
+    justify-self: center;
+    display: flex;
+    padding-right: 3rem;
+}
+
+/* Linkedin */
+.fa-linkedin {
+    /* width: 40px; */
+    font-size: 40px;
+}
+
+/* Git-hub */
+.fa-github {
+    /* width: 40px; */
+    font-size: 40px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #ed193b;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: black;
+}
+
+
+/* the Main content  */
+main {
+    /* position: relative; */
+    display: inline-flex;
+    /* z-index: -2; */
+}
+
+/* Intro section */
+.intro {
+    width: 75%;
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+/* Paragraph */
+.para {
+    text-indent: 2rem;
+}
+
+/* Main Title Color */
+.main-title {
+    color: #da2337;
+}
+
+.map {
+
+    /* text-align: right;
+    padding: 1rem;
+    /* background-color: #f2f2f2; */
+    /* border-radius: 10px; */
+
+
+}
+
+.frameLink {
+
+    text-align: right;
+    width: 50%;
+    height: 60vh;
+    /* margin: 0px 50px; */
+    margin-left: 500px;
+    border: none;
+    padding: 10px;
+    background-color: #bcedf3;
+    /* border-radius:  */
+}
+
+.map {
+
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 30px; */
+    padding: 2rem;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 75vw;
+
+}
+
+.map div {}
+
+.map .table {
+    width: 32vw;
+    /* height: 2vh; */
+    text-align: center;
+    /* border: black; */
+}
+
+.map div .cols-group {
+    /* background-color: #da2337; */
+    /* margin: 2px 50px; */
+    /* border: #da2337; */
+
+
+}
+
+.map thead {
+
+    /* padding: 30px; */
+}
+
+.map tr {
+
+    /* border: 1px solid red; */
+    /* background-color: #ed193b; */
+}
+
+.map .col {
+    text-align: center;
+    margin: 4px 500px;
+}
+
+.map .frameLink {
+
+    /* float: right; */
+    margin-left: auto;
+
+}
+
+.btn-group {
+
+    /* margin: 0px 30px; */
+    margin-top: 20px;
+    /* text-align: end; */
+    margin-bottom: 10px;
+
+}
+
+.btn-year {
+
+    width: 70px;
+    height: 30px;
+    background-color: rgb(255, 99, 132);
+    color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 6px;
+    margin: 0px 5px;
+    transition: all 0.3s ease 0.01s;
+
+    /* transition: all 0.1s ease-in-out 0.01s; */
+}
+
+.btn-year:hover {
+
+    background-color: rgb(238, 52, 92);
+    /* box-shadow: 2px 3px 7px 3px rgb(173, 173, 173); */
+    cursor: pointer;
+
+}
+
+/* the main chart class  */
+.chart {
+    width: 75%,
+}
+
+/*  */
+.modify {
+
+    display: grid;
+    grid-template-columns: 437px 409px;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 4rem;
+}
+
+/*  */
+.modify>div {
+    width: 400;
+}
+
+/* inflation chart  */
+#inflation {
+
+    width: 75%;
+    margin: auto;
+}
+
+/* inflation chart canva id  */
+#inflation #myChart5 {
+
+    /* width: 100px; */
+    /* padding: 50px 0px; */
+    /* height: 50%; */
+
+}
+
+/* import unit value index chart */
+#iuvi {
+    width: 60%;
+    margin: auto;
+}
+
+.tradeTable {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+
+}
+
+.tradeTable caption {
+    /* font-size: 13894rem; */
+    padding: 5px 0px;
+    background-color: #ed193b;
+
+}
+
+.tradeTable iframe {
+
+    /* padding: 10px 0px; */
+}
