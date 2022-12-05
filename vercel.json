@@ -1,11 +1,11 @@
 {
     "redirects": [
-        { "source": "/gdp", "destination": "./public/gdp.html" },
-        { "source": "/import", "destination": "./public/import.html" },
-        { "source": "/export", "destination": "./public/export.html" },
-        { "source": "/business", "destination": "./public/business.html" },
-        { "source": "/government", "destination": "./public/government.html" },
-        { "source": "/other", "destination": "./public/other.html" }
+        { "source": "/gdp", "destination": "./gdp.html" },
+        { "source": "/import", "destination": "./import.html" },
+        { "source": "/export", "destination": "./export.html" },
+        { "source": "/business", "destination": "./business.html" },
+        { "source": "/government", "destination": "./government.html" },
+        { "source": "/other", "destination": "./other.html" }
 
     ]
 }
