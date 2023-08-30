@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 
 /* utility classes And General Classes */
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     overflow-x: hidden;
 }
 
@@ -51,10 +51,8 @@ body {
 
 /* search box */
 .search {
-
     /* float: right; */
     margin-left: auto;
-
 }
 
 /* search bar */
@@ -64,13 +62,11 @@ body {
     border-radius: 8px;
     border: 1px solid rgb(109, 108, 108);
     color: #bcedf3;
-
 }
 
 .search span {
     align-items: center;
     /* margin: 40px 2px; */
-
 }
 
 /* search icon  */
@@ -78,8 +74,6 @@ body {
     width: 43px;
     position: relative;
     top: -5px;
-
-
 }
 
 /* Main Title */
@@ -144,13 +138,9 @@ ul {
 }
 
 /* Linkedin */
-.fa-linkedin {
-    /* width: 40px; */
-    font-size: 40px;
-}
-
-/* Git-hub */
-.fa-github {
+.fa-linkedin,
+.fa-github,
+.fa-twitter {
     /* width: 40px; */
     font-size: 40px;
 }
@@ -165,7 +155,6 @@ ul {
 .social-icons a:hover {
     color: black;
 }
-
 
 /* the Main content  */
 main {
@@ -192,17 +181,13 @@ main {
 }
 
 .map {
-
     /* text-align: right;
     padding: 1rem;
     /* background-color: #f2f2f2; */
     /* border-radius: 10px; */
-
-
 }
 
 .frameLink {
-
     text-align: right;
     width: 50%;
     height: 60vh;
@@ -215,7 +200,6 @@ main {
 }
 
 .map {
-
     display: flex;
     /* flex-direction: column; */
     /* margin: 30px; */
@@ -223,10 +207,10 @@ main {
     /* justify-content: center; */
     /* align-items: center; */
     width: 75vw;
-
 }
 
-.map div {}
+.map div {
+}
 
 .map .table {
     width: 32vw;
@@ -239,17 +223,13 @@ main {
     /* background-color: #da2337; */
     /* margin: 2px 50px; */
     /* border: #da2337; */
-
-
 }
 
 .map thead {
-
     /* padding: 30px; */
 }
 
 .map tr {
-
     /* border: 1px solid red; */
     /* background-color: #ed193b; */
 }
@@ -260,23 +240,18 @@ main {
 }
 
 .map .frameLink {
-
     /* float: right; */
     margin-left: auto;
-
 }
 
 .btn-group {
-
     /* margin: 0px 30px; */
     margin-top: 20px;
     /* text-align: end; */
     margin-bottom: 10px;
-
 }
 
 .btn-year {
-
     width: 70px;
     height: 30px;
     background-color: rgb(255, 99, 132);
@@ -290,21 +265,18 @@ main {
 }
 
 .btn-year:hover {
-
     background-color: rgb(238, 52, 92);
     /* box-shadow: 2px 3px 7px 3px rgb(173, 173, 173); */
     cursor: pointer;
-
 }
 
 /* the main chart class  */
 .chart {
-    width: 75%,
+    width: 75%;
 }
 
 /*  */
 .modify {
-
     display: grid;
     grid-template-columns: 437px 409px;
     justify-content: center;
@@ -313,24 +285,21 @@ main {
 }
 
 /*  */
-.modify>div {
+.modify > div {
     width: 400;
 }
 
 /* inflation chart  */
 #inflation {
-
     width: 75%;
     margin: auto;
 }
 
 /* inflation chart canva id  */
 #inflation #myChart5 {
-
     /* width: 100px; */
     /* padding: 50px 0px; */
     /* height: 50%; */
-
 }
 
 /* import unit value index chart */
@@ -340,23 +309,19 @@ main {
 }
 
 .tradeTable {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-
 }
 
 .tradeTable caption {
     /* font-size: 13894rem; */
     padding: 5px 0px;
     background-color: #ed193b;
-
 }
 
 .tradeTable iframe {
-
     /* padding: 10px 0px; */
 }
